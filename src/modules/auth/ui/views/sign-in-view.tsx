@@ -1,6 +1,6 @@
 "use client";
 
-import { email, set, z } from "zod";
+import { set, z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@/components/ui/input";
 
@@ -29,7 +29,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
-  email: z.email(),
+  email: z.string(),
   password: z.string().min(1, { message: "Password is required" }),
 });
 
